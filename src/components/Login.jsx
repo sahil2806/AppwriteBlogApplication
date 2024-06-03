@@ -33,7 +33,7 @@ function Login() {
                 }  
 
                 navigate("/")
-                // Navigate se apne aap  "/" (is pe matlab) root pe chala jayega
+                // Navigate se apne aap  "/" (is ka matlab) root pe chala jayega
             }
         } catch (error) {
             setError(error.message)

@@ -18,6 +18,7 @@ export default function PostForm({ post }) {
     });
 
     const navigate = useNavigate();
+
     const userData = useSelector((state) => {
         return (state.auth.userData)
     });
@@ -29,7 +30,7 @@ export default function PostForm({ post }) {
         
 
         if (post) {
-            // console.log(post)
+            
 
             const file = data.image[0] ? await appwriteService.uploadFile(data.image[0]) : null;
 
@@ -48,7 +49,7 @@ export default function PostForm({ post }) {
         } else {
             
             const file = await appwriteService.uploadFile(data.image[0]);
-            // console.log(file); 
+            
 
             if (file) {
                 const fileId = file.$id;

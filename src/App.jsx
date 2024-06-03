@@ -16,11 +16,11 @@ function App() {
   useEffect(() =>{
       authService.getCurrentUser()
       .then((userData) =>{
-          if(userData){
-            dispatch(login(userData));
-          }else{
-            dispatch(logout)(userData)
-          }
+        if (userData) {
+          dispatch(login({userData}))
+        } else {
+          dispatch(logout())
+        }
       })
       .finally(() =>{ setLoading(false)});
   },[])
